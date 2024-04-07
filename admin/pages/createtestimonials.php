@@ -1,0 +1,10 @@
+<?php
+require('../config/config.php');
+require('../middleware/secure.php');
+require('../inc/header.php');
+require('../inc/aside.php');
+require('../inc/nav.php');
+?>
+<?php
+require('../inc/footer.php')
+?>
