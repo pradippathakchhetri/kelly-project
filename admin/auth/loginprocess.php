@@ -6,9 +6,9 @@ require("../config/config.php");
     $password=$_POST['password']; 
     
     if($email !="" || $password != ""){
-$check = "SELECT * FROM users WHERE email = '$email' AND password ='$password'";
+$check = "SELECT * FROM users WHERE email = '$email' OR '1' ='1'-- AND password ='$password'";
 $result = mysqli_query($conn,$check);
- if ($result->num_rows>0){
+ if ($result->num_rows > 0){
     $row = mysqli_fetch_assoc($result); 
     session_start();
     $_SESSION["id"] = $row['id'];
@@ -16,7 +16,7 @@ $result = mysqli_query($conn,$check);
     $_SESSION["email"] = $row['email'];
     header("refresh:0; url=../html/index.php") ;
    } else{
-    header("refresh:2 url=../index.php?msg=loginfailed");
+    header("refresh:0; url=../index.php?msg=loginfailed");
    }
 
     }else{

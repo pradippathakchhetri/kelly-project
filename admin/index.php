@@ -69,28 +69,32 @@ require('config/config.php');
             </div>
 
 
-            <form id="formAuthentication" class="mb-3" action="auth/loginprocess.php" method="POST" enctype="multipart/form-data">
             <?php
-            if(isset($GET['msg'])){
-              $msg=$GET['msg'];
-              if($msg = "success"){
-               echo '<div class="alert alert-success" role="alert">
-                 Account created sucessfully.
-                </div>';
+            if(isset($_GET['msg'])){
+              $msg=$_GET['msg'];
+              if($msg == "success"){
+               echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+               Account created sucessfully.
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>';
               }
-              if($msg = "loginfailed"){
-               echo '<div class="alert alert-success" role="alert">
-                 Wrong username or password. Please try again
-                </div>';
+              if($msg == "loginfailed"){
+               echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+               Wrong username or password. Please try again
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>';
               }
-              if($msg = "emptyfield"){
-               echo '<div class="alert alert-success" role="alert">
-                Please fill all the fields.
+              if($msg == "emptyfield"){
+               echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+               Please fill all the fields.
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                </div>';
               }
             }
-            
             ?>  
+
+            <form id="formAuthentication" class="mb-3" action="auth/loginprocess.php" method="POST" enctype="multipart/form-data">
+        
               <div class="mb-4">
                 <label for="email" class="form-label mb-3">Email or Username</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email or username" autofocus />

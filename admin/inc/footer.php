@@ -10,7 +10,7 @@
                     href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
                     target="_blank"
                     class="footer-link me-4"
-                    >Support</a
+                    >Footer Here</a
                   >
                 </div>
               </div>

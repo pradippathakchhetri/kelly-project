@@ -80,7 +80,7 @@ require('admin/config/config.php');
                 </div>
               </div>
             </div>
-          </div>
+          </div>x z
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">

@@ -1,5 +1,6 @@
 <?php
 require('config/config.php');
+
 ?>
 <!DOCTYPE html>
 
@@ -64,12 +65,13 @@ require('config/config.php');
           <div class="card">
             <div class="card-body">
              <div class="border-bottom mb-3">
-             <h4 class="mb-3 text-center ">Admin Login </h4>
+             <h4 class="mb-3 text-center ">Admin Register </h4>
 
              </div>
 
               <form id="formAuthentication" class="mb-3" enctype="multipart/form-data" action="auth/registerprocess.php" method="POST">
               <?php
+              
             if(isset($GET['msg'])){
               $msg=$GET['msg'];
               if($msg = "registerfail"){
@@ -127,7 +129,7 @@ require('config/config.php');
 
               <p class="text-center">
                 <span>Already have an account?</span>
-                <a href="index.php">
+                <a href="">
                   <span>Sign in instead</span>
                 </a>
               </p>

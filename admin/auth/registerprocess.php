@@ -7,7 +7,7 @@ require("../config/config.php");
     $password = $_POST['password'];
 
    if($username !== "" && $email !=="" && $password !==""){
-     $check= "SELECT * FROM users WHERE username= '$username' OR email='$email' ";
+     $check= "SELECT * FROM users WHERE = '$username' OR email='$email' ";
      $result= mysqli_query($conn,$check);
 
      if($result->num_rows>0){
@@ -29,4 +29,4 @@ require("../config/config.php");
         header("refresh:0; url=../register.php?msg=emptyfield");
     }
  }
-    ?>
+ ?>
